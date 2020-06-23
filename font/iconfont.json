@@ -1,0 +1,30 @@
+{
+  "id": "1901479",
+  "name": "sass",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1300109",
+      "name": "时钟",
+      "font_class": "shizhong",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "5254935",
+      "name": "会话",
+      "font_class": "huihua",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "6221353",
+      "name": "收 藏",
+      "font_class": "shoucang",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    }
+  ]
+}

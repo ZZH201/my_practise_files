@@ -10,9 +10,30 @@
   position: relative
   top: 4px
 .icon-app-phone::before
-  content: url("../img/app_phone.png")
+  content: ""
+  position: absolute
+  top: 0
+  left: -17px
+  background: url("../img/app_phone.png") no-repeat
+  width: 17px
+  height: 17px
 .icon-upload::before
-  content: url("../img/upload.png")
+  content: ""
+  position: absolute
+  left: 10px
+  top: 3px
+  background: url("../img/upload.png") no-repeat
+  width: 18px
+  height: 18px
+  vertical-align: unset
+.icon-search::before
+  content: ""
+  position: absolute
+  top: 25%
+  left: 33%
+  width: 16px
+  height: 16px
+  background: url("../img/search.png") no-repeat
 //header样式 
 header
   background: #fff
@@ -28,14 +49,14 @@ header
     box-sizing: border-box
     z-index: 20
     .headerTopCon
-      background: #f00
+      
       width: 1160px
       height: 47px
       margin: 0 auto
       zoom: 1
       h1
         margin: 0
-        folat: left
+        float: left
         font-size: 16px
         color: #333
         a
@@ -48,21 +69,54 @@ header
             height: 27px
       //周边商城
       .groudshop
-        background: #ccc
+        
         display: inline-block
         margin-left: 15px
         
       //搜索框
       .searchBox
-        margin-left: 70px
-        .searchForm
-          input
+        display: inline-block
+        position: absolute
+        top: 7px
+        left: 38%
+        height: 32px
+        width: 362px
+        margin-left: -20px
+        folat: right
+        #searchForm
+          display: block
+          vertical-align: top
+          height: 32px
+          #search-text
+            vertical-align: top
+            line-height: 14px
+            border: 1px solid #e5e5e5
+            border-right: none
             width: 316px
-            border-radius: 3px 0 0 3px
+            padding: 8px 10px
+            box-sizing: border-box
+            color: #999
+            outline: none
+          button
+            background: #fd4c5d
+            width: 46px
+            height: 32px
+            position: relative
+            border: none
+            line-height: 32px
+            font-size: 14px
+            cursor: pointer
+            .icon-search
+              display: inline
+              position: absolute
+              left: 0
+              top: 0
+              width: 46px
+              height: 32px
+              
       //用户个人信息等数据
       .header-guide
         float: right
-        
         ul
           margin: 0
           list-style: none
@@ -71,12 +125,71 @@ header
             position: relative 
             display: inline-block
             text-align: center
+          .tougao
+            width: 74px
+            background-color: #fd4c5d
+            color: #fff
+            height: 26px
+            border-radius: 4px
+            border: 1px solid #fd4c5d
+            margin: 8px 0 0 11px
+            position: relative
+            display: inline-block
+            vertical-align: top
+            text-align: center
+            .icon-upload
+              text-align: center
+              line-height: 27px
+              height: 26px
+              color: #fff
+              font-size: 14px
+              text-indent: 24px
+              display: block
       .appDownload
         float: right
-        
+        text-align: right
         padding: 0 10px
-        
-        
+        a
+          position: relative        
+//导航栏
+nav
+  height: 46px
+  width: 100%
+  position: relative
+  top: 180px
+  border-bottom: 1px solid #e5e5e5
+  font-size: 14px
+  line-height: 46px
+  z-index: 9
+  display: block
+  .nav-list
+    height: 46px
+    margin: 0 auto
+    padding: 0 10px
+    border-radius: 3px 3px 0 0
+    background: #fff
+    width: 1190px
+    zoom: 1
+    display: block
+    ul
+      height: 46px
+      overflow: hidden
+      list-style: none  
+      
+      li
+        display: list-item
+        float: left
+        margin-right: 28px
+        a
+          display: block
+          padding: 0 6px
+          height: 46px
+        a:hover
+          color: $themecolor 
+        .active
+          color: $themecolor
+          border-bottom: 3px solid $themecolor
+          box-sizing: border-box
 //头部标题海报图
 .headerTitleImg
   width: 100%
@@ -85,17 +198,6 @@ header
   background-image: url("../img/title_img.png")
   background-size: auto 100%
   display: none
-//头部title图片
-nav ul
-  list-style: none  
-  margin-left: 110px
-  display: none
-  li
-    display: block
-    width: 45px
-    height: 40px
-    float: left
-    margin-left: 10px
-    a:hover
-      color: $themecolor
+
+
  
