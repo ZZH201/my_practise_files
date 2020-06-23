@@ -1,17 +1,34 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
 a {
   color: #000000;
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
+
+img {
+  vertical-align: top; }
 
 body {
-  margin: 0; }
+  line-height: 1; }
 
-.icon {
-  display: inline-block;
-  width: 17px;
-  height: 17px; }
+h1 {
+  display: block; }
 
 .icon-groudshop::before {
-  content: url("../img/shopImg.png"); }
+  display: inline-block;
+  content: "";
+  background: url("../img/shopImg.png");
+  background-size: contain;
+  width: 17px;
+  height: 17px;
+  position: relative;
+  top: 4px; }
 
 .icon-app-phone::before {
   content: url("../img/app_phone.png"); }
@@ -19,31 +36,73 @@ body {
 .icon-upload::before {
   content: url("../img/upload.png"); }
 
-.headerTop {
-  width: 100%;
-  height: 46px; }
-
-.headerTop > * {
-  float: left; }
-
-.headerTop div {
-  text-align: center; }
-.headerTop .userList {
-  margin: 0;
-  list-style: none; }
-  .headerTop .userList li {
-    float: left; }
+header {
+  background: #fff;
+  line-height: 46px;
+  padding-top: 46px; }
+  header .headerTop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    font-size: 12px;
+    box-sizing: border-box;
+    z-index: 20; }
+    header .headerTop .headerTopCon {
+      background: #f00;
+      width: 1160px;
+      height: 47px;
+      margin: 0 auto;
+      zoom: 1; }
+      header .headerTop .headerTopCon h1 {
+        margin: 0;
+        folat: left;
+        font-size: 16px;
+        color: #333; }
+        header .headerTop .headerTopCon h1 a {
+          display: block;
+          height: 27px;
+          padding: 8px 0 12px;
+          margin-right: 12px; }
+          header .headerTop .headerTopCon h1 a img {
+            width: 88px;
+            height: 27px; }
+      header .headerTop .headerTopCon .groudshop {
+        background: #ccc;
+        display: inline-block;
+        margin-left: 15px; }
+      header .headerTop .headerTopCon .searchBox {
+        margin-left: 70px; }
+        header .headerTop .headerTopCon .searchBox .searchForm input {
+          width: 316px;
+          border-radius: 3px 0 0 3px; }
+      header .headerTop .headerTopCon .header-guide {
+        float: right; }
+        header .headerTop .headerTopCon .header-guide ul {
+          margin: 0;
+          list-style: none; }
+          header .headerTop .headerTopCon .header-guide ul li {
+            padding: 0 10px;
+            position: relative;
+            display: inline-block;
+            text-align: center; }
+      header .headerTop .headerTopCon .appDownload {
+        float: right;
+        padding: 0 10px; }
 
 .headerTitleImg {
   width: 100%;
   height: 180px;
   background: no-repeat center top;
   background-image: url("../img/title_img.png");
-  background-size: auto 100%; }
+  background-size: auto 100%;
+  display: none; }
 
 nav ul {
   list-style: none;
-  margin-left: 110px; }
+  margin-left: 110px;
+  display: none; }
   nav ul li {
     display: block;
     width: 45px;

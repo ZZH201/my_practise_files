@@ -1,0 +1,101 @@
+@charset "utf-8"
+//图标样式
+.icon-groudshop::before
+  display: inline-block
+  content: ""
+  background: url("../img/shopImg.png")
+  background-size: contain
+  width: 17px
+  height: 17px
+  position: relative
+  top: 4px
+.icon-app-phone::before
+  content: url("../img/app_phone.png")
+.icon-upload::before
+  content: url("../img/upload.png")
+//header样式 
+header
+  background: #fff
+  line-height: 46px
+  padding-top: 46px
+  .headerTop
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 46px
+    font-size: 12px
+    box-sizing: border-box
+    z-index: 20
+    .headerTopCon
+      background: #f00
+      width: 1160px
+      height: 47px
+      margin: 0 auto
+      zoom: 1
+      h1
+        margin: 0
+        folat: left
+        font-size: 16px
+        color: #333
+        a
+          display: block
+          height: 27px
+          padding: 8px 0 12px
+          margin-right: 12px
+          img
+            width: 88px
+            height: 27px
+      //周边商城
+      .groudshop
+        background: #ccc
+        display: inline-block
+        margin-left: 15px
+        
+      //搜索框
+      .searchBox
+        margin-left: 70px
+        .searchForm
+          input
+            width: 316px
+            border-radius: 3px 0 0 3px
+      //用户个人信息等数据
+      .header-guide
+        float: right
+        
+        ul
+          margin: 0
+          list-style: none
+          li
+            padding: 0 10px
+            position: relative 
+            display: inline-block
+            text-align: center
+      .appDownload
+        float: right
+        
+        padding: 0 10px
+        
+        
+//头部标题海报图
+.headerTitleImg
+  width: 100%
+  height: 180px
+  background: no-repeat center top
+  background-image: url("../img/title_img.png")
+  background-size: auto 100%
+  display: none
+//头部title图片
+nav ul
+  list-style: none  
+  margin-left: 110px
+  display: none
+  li
+    display: block
+    width: 45px
+    height: 40px
+    float: left
+    margin-left: 10px
+    a:hover
+      color: $themecolor
+ 
