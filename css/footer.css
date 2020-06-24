@@ -1,0 +1,231 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+a {
+  color: #000000;
+  text-decoration: none;
+  outline: none; }
+
+img {
+  vertical-align: top; }
+
+body {
+  line-height: 1; }
+
+h1 {
+  display: block; }
+
+.icon-groudshop::before {
+  display: inline-block;
+  content: "";
+  background: url("../img/shopImg.png");
+  background-size: contain;
+  width: 17px;
+  height: 17px;
+  position: relative;
+  top: 4px; }
+
+.icon-app-phone::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -17px;
+  background: url("../img/app_phone.png") no-repeat;
+  width: 17px;
+  height: 17px; }
+
+.icon-upload::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 3px;
+  background: url("../img/upload.png") no-repeat;
+  width: 18px;
+  height: 18px;
+  vertical-align: unset; }
+
+.icon-search::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 33%;
+  width: 16px;
+  height: 16px;
+  background: url("../img/search.png") no-repeat; }
+
+.icon-rank::before {
+  content: "";
+  background: url("../img/icon_rank.png") no-repeat;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: -20px; }
+
+header {
+  background: #fff;
+  line-height: 46px;
+  padding-top: 46px; }
+  header .headerTop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    font-size: 12px;
+    box-sizing: border-box;
+    z-index: 20; }
+    header .headerTop .headerTopCon {
+      width: 1160px;
+      height: 47px;
+      margin: 0 auto;
+      zoom: 1; }
+      header .headerTop .headerTopCon h1 {
+        margin: 0;
+        float: left;
+        font-size: 16px;
+        color: #333; }
+        header .headerTop .headerTopCon h1 a {
+          display: block;
+          height: 27px;
+          padding: 8px 0 12px;
+          margin-right: 12px; }
+          header .headerTop .headerTopCon h1 a img {
+            width: 88px;
+            height: 27px; }
+      header .headerTop .headerTopCon .groudshop {
+        display: inline-block;
+        margin-left: 15px; }
+      header .headerTop .headerTopCon .searchBox {
+        display: inline-block;
+        position: absolute;
+        top: 7px;
+        left: 38%;
+        height: 32px;
+        width: 362px;
+        margin-left: -20px;
+        folat: right; }
+        header .headerTop .headerTopCon .searchBox #searchForm {
+          display: block;
+          vertical-align: top;
+          height: 32px; }
+          header .headerTop .headerTopCon .searchBox #searchForm #search-text {
+            vertical-align: top;
+            line-height: 14px;
+            border: 1px solid #e5e5e5;
+            border-right: none;
+            width: 316px;
+            padding: 8px 10px;
+            box-sizing: border-box;
+            color: #999;
+            outline: none; }
+          header .headerTop .headerTopCon .searchBox #searchForm button {
+            background: #fd4c5d;
+            width: 46px;
+            height: 32px;
+            position: relative;
+            border: none;
+            line-height: 32px;
+            font-size: 14px;
+            cursor: pointer; }
+            header .headerTop .headerTopCon .searchBox #searchForm button .icon-search {
+              display: inline;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 46px;
+              height: 32px; }
+      header .headerTop .headerTopCon .header-guide {
+        float: right; }
+        header .headerTop .headerTopCon .header-guide ul {
+          margin: 0;
+          list-style: none; }
+          header .headerTop .headerTopCon .header-guide ul li {
+            padding: 0 10px;
+            position: relative;
+            display: inline-block;
+            text-align: center; }
+          header .headerTop .headerTopCon .header-guide ul .tougao {
+            width: 74px;
+            background-color: #fd4c5d;
+            color: #fff;
+            height: 26px;
+            border-radius: 4px;
+            border: 1px solid #fd4c5d;
+            margin: 8px 0 0 11px;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center; }
+            header .headerTop .headerTopCon .header-guide ul .tougao .icon-upload {
+              text-align: center;
+              line-height: 27px;
+              height: 26px;
+              color: #fff;
+              font-size: 14px;
+              text-indent: 24px;
+              display: block; }
+      header .headerTop .headerTopCon .appDownload {
+        float: right;
+        text-align: right;
+        padding: 0 10px; }
+        header .headerTop .headerTopCon .appDownload a {
+          position: relative; }
+
+nav {
+  height: 46px;
+  width: 100%;
+  position: relative;
+  top: 180px;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 14px;
+  line-height: 46px;
+  z-index: 9;
+  display: block; }
+  nav .nav-list {
+    height: 46px;
+    margin: 0 auto;
+    padding: 0 10px;
+    border-radius: 3px 3px 0 0;
+    background: #fff;
+    width: 1190px;
+    zoom: 1;
+    display: block; }
+    nav .nav-list ul {
+      height: 46px;
+      overflow: hidden;
+      list-style: none; }
+      nav .nav-list ul li {
+        display: list-item;
+        float: left;
+        margin-right: 28px; }
+        nav .nav-list ul li a {
+          display: block;
+          padding: 0 6px;
+          height: 46px; }
+          nav .nav-list ul li a .icon-rank {
+            position: relative; }
+        nav .nav-list ul li a:hover {
+          color: #fd4c5b; }
+        nav .nav-list ul li .active {
+          color: #fd4c5b;
+          border-bottom: 3px solid #fd4c5b;
+          box-sizing: border-box; }
+
+.headerTitleImg {
+  position: relative;
+  margin-bottom: 46px;
+  margin-top: -46px;
+  width: 100%;
+  height: 180px;
+  background: no-repeat center top;
+  background-image: url("../upload/title_img.png");
+  background-size: auto 100%;
+  overflow: hidden; }
+
+/*# sourceMappingURL=footer.css.map */
