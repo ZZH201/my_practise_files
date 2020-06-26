@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2479165",
+      "name": "qipao",
+      "font_class": "qipao",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "3385257",
+      "name": "yan",
+      "font_class": "yan",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
       "icon_id": "1300109",
       "name": "时钟",
       "font_class": "shizhong",
