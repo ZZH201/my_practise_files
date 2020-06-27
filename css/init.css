@@ -92,6 +92,37 @@ main section {
           height: 4px;
           background: #fd4c5b;
           border-radius: 3px; }
+    main section .ArticleBlockSpace .ArticleListUser {
+      margin-top: 20px;
+      overflow: hidden; }
+      main section .ArticleBlockSpace .ArticleListUser .ArticleListUserImg {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        float: left; }
+        main section .ArticleBlockSpace .ArticleListUser .ArticleListUserImg img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%; }
+      main section .ArticleBlockSpace .ArticleListUser .ArticleListUserContent {
+        float: left;
+        margin-left: 10px;
+        padding-top: 3px; }
+        main section .ArticleBlockSpace .ArticleListUser .ArticleListUserContent .ArticleListUserName {
+          display: block;
+          width: 230px;
+          font-size: 14px;
+          color: #555;
+          line-height: 14px; }
+        main section .ArticleBlockSpace .ArticleListUser .ArticleListUserContent span {
+          display: block;
+          width: 230px;
+          font-size: 14px;
+          color: #999;
+          line-height: 25px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden; }
     main section .ArticleBlockSpace hr {
       height: 1px;
       border: 1px;
@@ -205,6 +236,153 @@ main section {
             height: 4px;
             border-radius: 3px;
             background-color: #fd4c5b; }
+    main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateTitle {
+      margin: 30px 0; }
+      main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateTitle .dynamicsUpdateLine {
+        position: relative;
+        top: 2px;
+        display: inline-block;
+        height: 18px;
+        width: 4px;
+        background: #fd4c5b;
+        border-radius: 3px; }
+      main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateTitle .dynamicsUpdateSub {
+        padding-left: 10px;
+        font-size: 20px;
+        color: #333333;
+        line-height: 20px; }
+      main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateTitle .dynamicsUpdateChange {
+        margin-left: 20px; }
+        main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateTitle .dynamicsUpdateChange img {
+          position: relative;
+          top: 6px; }
+        main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateTitle .dynamicsUpdateChange span {
+          margin-left: 8px;
+          font-size: 14px;
+          color: #555; }
+    main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list {
+      width: 800px;
+      margin-bottom: 50px; }
+      main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item-hr {
+        display: block;
+        height: 1px;
+        margin: 21px 0 21px 0;
+        background-color: #e6e6e6;
+        border: none; }
+      main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item {
+        position: relative;
+        height: 80px; }
+        main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-left {
+          float: left;
+          width: 70px;
+          text-align: right; }
+          main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-left .comm-count {
+            margin: 0 0 4px 4px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fd4c5b;
+            letter-spacing: 0;
+            line-height: 20px; }
+          main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-left .comm-tt {
+            font-size: 12px;
+            line-height: 12px;
+            color: #999999;
+            letter-spacing: 0; }
+        main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center {
+          float: left;
+          width: 548px;
+          height: 80px;
+          margin-left: 20px; }
+          main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-cont-top {
+            width: 560px; }
+            main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-cont-top .atc-title {
+              float: left;
+              height: 20px;
+              max-width: 500px;
+              font-size: 18px;
+              font-weight: bold;
+              color: #333333;
+              line-height: 20px;
+              letter-spacing: 0;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden; }
+            main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-cont-top .atc-original {
+              float: left;
+              width: 44px;
+              height: 20px;
+              margin-left: 10px;
+              font-size: 12px;
+              line-height: 20px;
+              text-align: center;
+              color: #58a3ff;
+              letter-spacing: 0;
+              border: 1px solid #58a3ff;
+              border-radius: 4px; }
+          main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-cont-top::after {
+            content: "";
+            display: block;
+            clear: both; }
+          main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .info-min {
+            margin-top: 10px;
+            width: 540px;
+            height: 14px;
+            font-size: 14px;
+            color: #999999;
+            line-height: 14px;
+            text-overflow: ellipsis;
+            overflow: hidden; }
+          main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-info {
+            margin-top: 21px;
+            font-size: 12px;
+            line-height: 14px;
+            color: #999999;
+            letter-spacing: 0; }
+            main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-info .atc-up {
+              float: left;
+              margin-right: 20px;
+              font-size: 12px;
+              color: #999999;
+              max-width: 130px;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden; }
+            main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-info .atc-time {
+              float: left;
+              margin-right: 20px;
+              font-size: 12px;
+              color: #999999; }
+            main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-info .atc-view {
+              float: left;
+              margin-right: 20px;
+              font-size: 12px;
+              color: #999999; }
+              main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-info .atc-view .icon-eye-now {
+                font-size: 12px; }
+              main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-info .atc-view .views {
+                padding-left: 4px; }
+            main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-info .atc-domain-t {
+              float: right;
+              color: #000; }
+          main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-center .atc-info::after {
+            content: "";
+            display: block;
+            clear: both; }
+        main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-image {
+          float: left; }
+          main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-image img {
+            margin-left: 20px;
+            width: 140px;
+            height: 80px;
+            border-radius: 4px; }
+        main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item .atc-image::after {
+          content: "";
+          display: block;
+          clear: both; }
+      main section .ArticleBlockLeft .generalRecommend .dynamicsUpdateContent .article-list .article-item::after {
+        content: "";
+        display: block;
+        clear: both; }
 
 .mr0 {
   margin-right: 0 !important; }

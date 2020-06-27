@@ -47,6 +47,7 @@ main
                 font-size: 20px
                 line-height: 26px
                 margin-bottom: 14px
+                //热门文章
                 .module-tab
                     float: right
                     margin-top: 4px
@@ -70,6 +71,38 @@ main
                             height: 4px
                             background: $themecolor 
                             border-radius: 3px
+            //上榜用户
+            .ArticleListUser
+                margin-top: 20px
+                overflow: hidden
+                .ArticleListUserImg
+                    display: inline-block
+                    width: 40px
+                    height: 40px
+                    float: left
+                    img
+                        width: 40px
+                        height: 40px
+                        border-radius: 50%
+                .ArticleListUserContent
+                    float: left
+                    margin-left: 10px
+                    padding-top: 3px
+                    .ArticleListUserName
+                        display: block
+                        width: 230px
+                        font-size: 14px
+                        color: #555
+                        line-height: 14px
+                    span
+                        display: block
+                        width: 230px
+                        font-size: 14px
+                        color: #999
+                        line-height: 25px
+                        text-overflow: ellipsis
+                        white-space: nowrap
+                        overflow: hidden
             hr
                 height: 1px
                 border: 1px
@@ -185,3 +218,153 @@ main
                             height: 4px
                             border-radius: 3px
                             background-color: $themecolor
+            //话题讨论/换一换
+            .generalRecommend
+                .dynamicsUpdateTitle
+                    margin: 30px 0
+                    .dynamicsUpdateLine
+                        position: relative
+                        top: 2px
+                        display: inline-block
+                        height: 18px
+                        width: 4px
+                        background: $themecolor
+                        border-radius: 3px
+                    .dynamicsUpdateSub
+                        padding-left: 10px
+                        font-size: 20px
+                        color: #333333
+                        line-height: 20px
+                    .dynamicsUpdateChange
+                        margin-left: 20px
+                        img
+                            position: relative
+                            top: 6px
+                        span
+                            margin-left: 8px
+                            font-size: 14px
+                            color: #555
+                .dynamicsUpdateContent
+                    .article-list
+                        width: 800px
+                        margin-bottom: 50px
+                        .article-item-hr
+                            display: block
+                            height: 1px
+                            margin: 21px 0 21px 0
+                            background-color: #e6e6e6
+                            border: none
+                        .article-item
+                            position: relative
+                            height: 80px
+                            .atc-left
+                                float: left
+                                width: 70px
+                                text-align: right
+                                .comm-count
+                                    margin: 0 0 4px 4px
+                                    font-size: 20px
+                                    font-weight: bold
+                                    color: $themecolor
+                                    letter-spacing: 0
+                                    line-height: 20px
+                                .comm-tt
+                                    font-size: 12px
+                                    line-height: 12px
+                                    color: #999999
+                                    letter-spacing: 0
+                            .atc-center
+                                float: left
+                                width: 548px
+                                height: 80px
+                                margin-left: 20px
+                                .atc-cont-top
+                                    width: 560px
+                                    .atc-title
+                                        float: left
+                                        height: 20px
+                                        max-width: 500px
+                                        font-size: 18px
+                                        font-weight: bold
+                                        color: #333333
+                                        line-height: 20px
+                                        letter-spacing: 0
+                                        text-overflow: ellipsis
+                                        white-space: nowrap
+                                        overflow: hidden
+                                    .atc-original
+                                        float: left
+                                        width: 44px
+                                        height: 20px
+                                        margin-left: 10px
+                                        font-size: 12px
+                                        line-height: 20px
+                                        text-align: center
+                                        color: #58a3ff
+                                        letter-spacing: 0
+                                        border: 1px solid #58a3ff
+                                        border-radius: 4px
+                                .atc-cont-top::after
+                                    content: ""
+                                    display: block
+                                    clear: both
+                                .info-min
+                                    margin-top: 10px
+                                    width: 540px
+                                    height: 14px
+                                    font-size: 14px
+                                    color: #999999
+                                    line-height: 14px
+                                    text-overflow: ellipsis
+                                    overflow: hidden
+                                .atc-info
+                                    margin-top: 21px
+                                    font-size: 12px
+                                    line-height: 14px
+                                    color: #999999
+                                    letter-spacing: 0
+                                    .atc-up
+                                        float: left
+                                        margin-right: 20px
+                                        font-size: 12px
+                                        color: #999999
+                                        max-width: 130px
+                                        text-overflow: ellipsis
+                                        white-space: nowrap
+                                        overflow: hidden
+                                    .atc-time
+                                        float: left
+                                        margin-right: 20px
+                                        font-size: 12px
+                                        color: #999999
+                                    .atc-view
+                                        float: left
+                                        margin-right: 20px
+                                        font-size: 12px
+                                        color: #999999
+                                        .icon-eye-now
+                                            font-size: 12px
+                                        .views
+                                            padding-left: 4px
+                                    .atc-domain-t
+                                        float: right
+                                        color: #000
+                                .atc-info::after
+                                    content: ""
+                                    display: block
+                                    clear: both
+                            .atc-image
+                                float: left
+                                img
+                                    margin-left: 20px
+                                    width: 140px
+                                    height: 80px
+                                    border-radius: 4px
+                            .atc-image::after
+                                content: ""
+                                display: block
+                                clear: both
+                        .article-item::after
+                            content: ""
+                            display: block
+                            clear: both
