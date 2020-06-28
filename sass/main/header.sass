@@ -43,6 +43,7 @@
   top: 0
   left: -20px
 //header样式 
+
 header
   background: #fff
   line-height: 46px
@@ -58,7 +59,6 @@ header
     background-color: #fff
     z-index: 20
     .headerTopCon
-      
       width: 1160px
       height: 47px
       margin: 0 auto
@@ -81,7 +81,6 @@ header
         
         display: inline-block
         margin-left: 15px
-        
       //搜索框
       .searchBox
         display: inline-block
@@ -121,8 +120,7 @@ header
               left: 0
               top: 0
               width: 46px
-              height: 32px
-              
+              height: 32px    
       //用户个人信息等数据
       .header-guide
         float: right
@@ -159,13 +157,22 @@ header
         text-align: right
         padding: 0 10px
         a
-          position: relative        
+          position: relative
+  //头部标题海报图
+  .headerTitleImg
+    position: relative
+    margin-top: 0px
+    width: 100%
+    height: 180px
+    background: no-repeat center top
+    background-image: url("../upload/title_img.png")
+    background-size: auto 100%
+    overflow: hidden
 //导航栏
-nav
+.nav
   height: 46px
   width: 100%
-  position: relative
-  top: 180px
+  
   border-bottom: 1px solid #e5e5e5
   font-size: 14px
   line-height: 46px
@@ -200,18 +207,10 @@ nav
           color: $themecolor
           border-bottom: 3px solid $themecolor
           box-sizing: border-box
-//头部标题海报图
-.headerTitleImg
-  position: relative
-  margin-bottom: 46px
-  margin-top: -46px
-  width: 100%
-  height: 180px
-  background: no-repeat center top
-  background-image: url("../upload/title_img.png")
-  background-size: auto 100%
-  overflow: hidden
-  
+.nav-sticky
+    position: -webkit-sticky
+    position: sticky
+    top: 46px
 
 
  
