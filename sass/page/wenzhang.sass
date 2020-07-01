@@ -109,6 +109,7 @@ main
                 background-color: #e6e6e6                
             .HotArticle
                 position: relative
+                height: 40px
                 margin-top: 16px
                 .hotArticleIcon
                     display: inline-block
@@ -141,6 +142,7 @@ main
                         border-style: solid
                         overflow: visible
                         visibility: visible
+                
                 .HotArticleText
                     display: inline-block
                     width: 246px
@@ -150,7 +152,7 @@ main
                     white-space: nowrap
                     overflow: hidden
                 .contentDese
-                    margin-left: 34px
+                    margin: 10px 0 0 34px
                     line-height: 13px
                     a
                         display: inline-block
@@ -165,13 +167,32 @@ main
                         display: inline-block
                         width: 56px
                         margin-left: 10px
+                        
                     .icon-eye-new::before
                         content: ""
                         display: inline-block
                         width: 1px
                         height: 1px
                         background: #0f0
-        
+            //根据排行榜顺序换icon颜色
+            .HotArticle:nth-child(2)
+                .HotArticleContent
+                    .hotArticleIcon
+                        background-color: #fd4c5b
+                        .border-triangle
+                            border-color: #fd4c5b
+            .HotArticle:nth-child(3)
+                .HotArticleContent
+                    .hotArticleIcon
+                        background-color: #ff9510
+                        .border-triangle
+                            border-color: #ff9510
+            .HotArticle:nth-child(4)
+                .HotArticleContent
+                    .hotArticleIcon
+                        background-color: #fad215
+                        .border-triangle
+                            border-color: #fad215
         .a-column-left
             float: left
             width: 800px

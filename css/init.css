@@ -129,6 +129,7 @@ main section {
       background-color: #e6e6e6; }
     main section .ArticleBlockSpace .HotArticle {
       position: relative;
+      height: 40px;
       margin-top: 16px; }
       main section .ArticleBlockSpace .HotArticle .hotArticleIcon {
         display: inline-block;
@@ -170,7 +171,7 @@ main section {
         white-space: nowrap;
         overflow: hidden; }
       main section .ArticleBlockSpace .HotArticle .contentDese {
-        margin-left: 34px;
+        margin: 10px 0 0 34px;
         line-height: 13px; }
         main section .ArticleBlockSpace .HotArticle .contentDese a {
           display: inline-block;
@@ -191,6 +192,18 @@ main section {
           width: 1px;
           height: 1px;
           background: #0f0; }
+    main section .ArticleBlockSpace .HotArticle:nth-child(2) .HotArticleContent .hotArticleIcon {
+      background-color: #fd4c5b; }
+      main section .ArticleBlockSpace .HotArticle:nth-child(2) .HotArticleContent .hotArticleIcon .border-triangle {
+        border-color: #fd4c5b; }
+    main section .ArticleBlockSpace .HotArticle:nth-child(3) .HotArticleContent .hotArticleIcon {
+      background-color: #ff9510; }
+      main section .ArticleBlockSpace .HotArticle:nth-child(3) .HotArticleContent .hotArticleIcon .border-triangle {
+        border-color: #ff9510; }
+    main section .ArticleBlockSpace .HotArticle:nth-child(4) .HotArticleContent .hotArticleIcon {
+      background-color: #fad215; }
+      main section .ArticleBlockSpace .HotArticle:nth-child(4) .HotArticleContent .hotArticleIcon .border-triangle {
+        border-color: #fad215; }
   main section .a-column-left {
     float: left;
     width: 800px;
@@ -558,6 +571,8 @@ header {
       header .headerTop .headerTopCon .groudshop {
         display: inline-block;
         margin-left: 15px; }
+        header .headerTop .headerTopCon .groudshop a:hover {
+          color: #fd4c5b; }
       header .headerTop .headerTopCon .searchBox {
         display: inline-block;
         position: absolute;
@@ -607,13 +622,15 @@ header {
             position: relative;
             display: inline-block;
             text-align: center; }
+            header .headerTop .headerTopCon .header-guide ul li a:hover {
+              color: #fd4c5b; }
           header .headerTop .headerTopCon .header-guide ul .tougao {
             width: 74px;
-            background-color: #fd4c5d;
+            background-color: #fd4c5b;
             color: #fff;
             height: 26px;
             border-radius: 4px;
-            border: 1px solid #fd4c5d;
+            border: 1px solid #fd4c5b;
             margin: 8px 0 0 11px;
             position: relative;
             display: inline-block;
@@ -628,11 +645,24 @@ header {
               text-indent: 24px;
               display: block; }
       header .headerTop .headerTopCon .appDownload {
+        position: relative;
         float: right;
         text-align: right;
         padding: 0 10px; }
         header .headerTop .headerTopCon .appDownload a {
           position: relative; }
+        header .headerTop .headerTopCon .appDownload div {
+          display: none;
+          position: absolute;
+          top: 46px;
+          left: -80%;
+          padding: 10px;
+          text-align: center;
+          background-color: #ffffff;
+          border-radius: 0 0 3px 3px;
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
+      header .headerTop .headerTopCon .appDownload:hover div {
+        display: block; }
   header .headerTitleImg {
     position: relative;
     margin-top: 0px;

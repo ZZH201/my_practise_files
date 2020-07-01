@@ -6,6 +6,7 @@
     <title>A站文脏区</title>
     <link rel="stylesheet" href="./css/init.css">
     <link rel="stylesheet" href="./font/iconfont.css">
+    <script src="./js/vue.js"></script>
 </head>
 
 <body>
@@ -40,7 +41,7 @@
                         <span>下载客户端</span>
                     </a>
                     <div>
-                        <!-- 这里是二维码，等写js再说 -->
+                        <img src="./upload/app-download.png">
                     </div>
                 </div>
 
@@ -54,7 +55,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="headerTitleImg">
             <a href="https://www.acfun.cn/spn/avuplevel3"></a>
         </div>
@@ -122,8 +123,8 @@
             </div>
 
             <!-- 右侧热门文章排行榜 -->
-            <div class="ArticleBlockSpace">
-                <div class="ArticleRightTitle">
+            <div id="rightHotList" class="ArticleBlockSpace">
+                <div  class="ArticleRightTitle">
                     <span>热门文章</span>
                     <div class="module-tab">
                         <div class="ArticleHotTitle">
@@ -136,167 +137,13 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="HotArticle">
-                        <div class="HotArticleContent">
-                            <div class="hotArticleIcon" style="background-color: #fd4c5b">
-                                <div class="border-triangle" style="border-color: #fd4c5b">
-                                </div>
-                                <span>1</span>
-                            </div>
-                        </div>
-                        <a href="javascript:;" title="惨亏92%! 王健林：忘掉1亿小目标，活下去！" class="HotArticleText">惨亏92%!
-                            王健林：忘掉1亿小目标，活下去！</a>
-                        <div class="contentDese">
-                            <a href="javascript:;">UP:鬼娃娃花子</a>
-                            <span class="hotArticleView">
-                                <span class="icon-eye-new">
-                                    <i class="iconfont icon-yan"></i>
-                                </span>
-                                <span>7.1万</span>
-                            </span>
-                            <span class="hotArticleComment">
-                                <span class="icon-to-comm-new">
-                                    <i class="iconfont icon-qipao"></i>
-                                </span>
-                                <span>251</span>
-                            </span>
-                        </div>
-
-
-                    </div>
-                    <div class="HotArticle">
-                        <div class="HotArticleContent">
-                            <div class="hotArticleIcon" style="background-color: #ff9510">
-                                <div class="border-triangle" style="border-color: #ff9510">
-                                </div>
-                                <span>2</span>
-                            </div>
-                        </div>
-                        <a href="javascript:;" title="漫展痛车惨遭“坦克”碾压，痛车团体发文诉"
-                            class="HotArticleText">漫展痛车惨遭“坦克”碾压，痛车团体发文诉</a>
-                        <div class="contentDese">
-                            <a href="javascript:;">UP:HD耄</a>
-                            <span class="hotArticleView">
-                                <span class="icon-eye-new">
-                                    <i class="iconfont icon-yan"></i>
-                                </span>
-                                <span>5万</span>
-                            </span>
-                            <span class="hotArticleComment">
-                                <span class="icon-to-comm-new">
-                                    <i class="iconfont icon-qipao"></i>
-                                </span>
-                                <span>411</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="HotArticle">
-                        <div class="HotArticleContent">
-                            <div class="hotArticleIcon" style="background-color: #fad215">
-                                <div class="border-triangle" style="border-color: #fad215">
-                                </div>
-                                <span>3</span>
-                            </div>
-                        </div>
-                        <a href="javascript:;" title="印媒炒作中国侵占尼泊尔村庄 尼泊尔外交辟谣" class="HotArticleText">印媒炒作中国侵占尼泊尔村庄
-                            尼泊尔外交辟谣</a>
-                        <div class="contentDese">
-                            <a href="javascript:;">UP:别加芹菜</a>
-                            <span class="hotArticleView">
-                                <span class="icon-eye-new">
-                                    <i class="iconfont icon-yan"></i>
-                                </span>
-                                <span>3.8万</span>
-                            </span>
-                            <span class="hotArticleComment">
-                                <span class="icon-to-comm-new">
-                                    <i class="iconfont icon-qipao"></i>
-                                </span>
-                                <span>173</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="HotArticle">
-                        <div class="HotArticleContent">
-                            <div class="hotArticleIcon">
-                                <div class="border-triangle">
-                                </div>
-                                <span>4</span>
-                            </div>
-                        </div>
-                        <a href="javascript:;" title="缉毒女警讲述卧底经历：当“大哥的女人”，毒贩照着脸打忍痛也要完成抓捕"
-                            class="HotArticleText">缉毒女警讲述卧底经历：当“大哥的女人”，毒贩照着脸打忍痛也要完成抓捕</a>
-                        <div class="contentDese">
-                            <a href="javascript:;">UP:流浪的北</a>
-                            <span class="hotArticleView">
-                                <span class="icon-eye-new">
-                                    <i class="iconfont icon-yan"></i>
-                                </span>
-                                <span>3.6万</span>
-                            </span>
-                            <span class="hotArticleComment">
-                                <span class="icon-to-comm-new">
-                                    <i class="iconfont icon-qipao"></i>
-                                </span>
-                                <span>115</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="HotArticle">
-                        <div class="HotArticleContent">
-                            <div class="hotArticleIcon">
-                                <div class="border-triangle">
-                                </div>
-                                <span>5</span>
-                            </div>
-                        </div>
-                        <a href="javascript:;" title="毫无人性！19岁中国女留学生在西澳大学校园厕所内，被残忍性侵多次!恶魔被判12年"
-                            class="HotArticleText">毫无人性！19岁中国女留学生在西澳大学校园厕所内，被残忍性侵多次!恶魔被判12年</a>
-                        <div class="contentDese">
-                            <a href="javascript:;">UP:梦斩千钧</a>
-                            <span class="hotArticleView">
-                                <span class="icon-eye-new">
-                                    <i class="iconfont icon-yan"></i>
-                                </span>
-                                <span>3万</span>
-                            </span>
-                            <span class="hotArticleComment">
-                                <span class="icon-to-comm-new">
-                                    <i class="iconfont icon-qipao"></i>
-                                </span>
-                                <span>123</span>
-                            </span>
-                        </div>
-
-
-                    </div>
-                    <div class="HotArticle">
-                        <div class="HotArticleContent">
-                            <div class="hotArticleIcon">
-                                <div class="border-triangle">
-                                </div>
-                                <span>6</span>
-                            </div>
-                        </div>
-                        <a href="javascript:;" title="OMG！美国警察跪杀黑人系AI合成？！"
-                            class="HotArticleText">OMG！美国警察跪杀黑人系AI合成？！</a>
-                        <div class="contentDese">
-                            <a href="javascript:;">UP:鬼娃娃花子</a>
-                            <span class="hotArticleView">
-                                <span class="icon-eye-new">
-                                    <i class="iconfont icon-yan"></i>
-                                </span>
-                                <span>2.2万</span>
-                            </span>
-                            <span class="hotArticleComment">
-                                <span class="icon-to-comm-new">
-                                    <i class="iconfont icon-qipao"></i>
-                                </span>
-                                <span>107</span>
-                            </span>
-                        </div>
-                    </div>
                 </div>
+                <right-hot-item 
+                    v-for="(item,index) in msgList" 
+                    v-bind:msg="item" 
+                    v-bind:index="index"
+                    v-bind:key="item.aid">
+                </right-hot-item>
             </div>
             <!-- 用户排行榜 -->
             <div class="ArticleBlockSpace">
@@ -377,122 +224,15 @@
                         </a>
                     </div>
                     <div class="dynamicsUpdateContent">
-                        <div class="article-list">
-                            <div class="article-item">
-                                <div class="atc-left">
-                                    <div class="comm-count">69</div>
-                                    <div class="comm-tt">评论</div>
-                                </div>
-                                <div class="atc-center">
-                                    <div class="atc-cont-top">
-                                        <a href="javascript:;" class="atc-title">印度3000家酒店拒绝中国人入住</a>
-                                        <div class="atc-original">原创</div>
-                                    </div>
-                                    <div class="info-min">
-                                        日本网友用纸杯做虚拟女主播绊爱 智障标表情神还原
-                                    </div>
-                                    <div class="atc-info">
-                                        <a href="javascript:;" class="atc-up">UP:乜嘢乸型</a>
-                                        <p class="atc-time">2020-06-26 10:44:33</p>
-                                        <p class="atc-view">
-                                            <span class="icon-eye-now iconfont icon-yan"></span>
-                                            <span class="views">29,016</span>
-                                        </p>
-                                        <a href="javascript:;" title="点击前往 杂谈 领域" class="atc-domain-t">杂谈</a>
-                                        <p class="atc-domain-t">来自：</p>
-                                    </div>
-                                </div>
-                                <a href="javascript:;" title="点击查看文章" class="atc-image">
-                                    <img src="./img/img_aixifan.png">
-                                </a>
-                            </div>
+                        <div id="art-list" class="article-list">
+                            <art-item v-bind:msg="msgList[0]"></art-item>
                             <hr class="article-item-hr">
-                            <div class="article-item">
-                                <div class="atc-left">
-                                    <div class="comm-count">69</div>
-                                    <div class="comm-tt">评论</div>
-                                </div>
-                                <div class="atc-center">
-                                    <div class="atc-cont-top">
-                                        <a href="javascript:;" class="atc-title">印度3000家酒店拒绝中国人入住</a>
-                                        <div class="atc-original">原创</div>
-                                    </div>
-                                    <div class="info-min">
-                                        日本网友用纸杯做虚拟女主播绊爱 智障标表情神还原
-                                    </div>
-                                    <div class="atc-info">
-                                        <a href="javascript:;" class="atc-up">UP:乜嘢乸型</a>
-                                        <p class="atc-time">2020-06-26 10:44:33</p>
-                                        <p class="atc-view">
-                                            <span class="icon-eye-now iconfont icon-yan"></span>
-                                            <span class="views">29,016</span>
-                                        </p>
-                                        <a href="javascript:;" title="点击前往 杂谈 领域" class="atc-domain-t">杂谈</a>
-                                        <p class="atc-domain-t">来自：</p>
-                                    </div>
-                                </div>
-                                <a href="javascript:;" title="点击查看文章" class="atc-image">
-                                    <img src="./img/img_aixifan.png">
-                                </a>
-                            </div>
+                            <art-item v-bind:msg="msgList[1]"></art-item>
                             <hr class="article-item-hr">
-                            <div class="article-item">
-                                <div class="atc-left">
-                                    <div class="comm-count">69</div>
-                                    <div class="comm-tt">评论</div>
-                                </div>
-                                <div class="atc-center">
-                                    <div class="atc-cont-top">
-                                        <a href="javascript:;" class="atc-title">印度3000家酒店拒绝中国人入住</a>
-                                        <div class="atc-original">原创</div>
-                                    </div>
-                                    <div class="info-min">
-                                        日本网友用纸杯做虚拟女主播绊爱 智障标表情神还原
-                                    </div>
-                                    <div class="atc-info">
-                                        <a href="javascript:;" class="atc-up">UP:乜嘢乸型</a>
-                                        <p class="atc-time">2020-06-26 10:44:33</p>
-                                        <p class="atc-view">
-                                            <span class="icon-eye-now iconfont icon-yan"></span>
-                                            <span class="views">29,016</span>
-                                        </p>
-                                        <a href="javascript:;" title="点击前往 杂谈 领域" class="atc-domain-t">杂谈</a>
-                                        <p class="atc-domain-t">来自：</p>
-                                    </div>
-                                </div>
-                                <a href="javascript:;" title="点击查看文章" class="atc-image">
-                                    <img src="./img/img_aixifan.png">
-                                </a>
-                            </div>
+                            <art-item v-bind:msg="msgList[2]"></art-item>
                             <hr class="article-item-hr">
-                            <div class="article-item">
-                                <div class="atc-left">
-                                    <div class="comm-count">69</div>
-                                    <div class="comm-tt">评论</div>
-                                </div>
-                                <div class="atc-center">
-                                    <div class="atc-cont-top">
-                                        <a href="javascript:;" class="atc-title">印度3000家酒店拒绝中国人入住</a>
-                                        <div class="atc-original">原创</div>
-                                    </div>
-                                    <div class="info-min">
-                                        日本网友用纸杯做虚拟女主播绊爱 智障标表情神还原
-                                    </div>
-                                    <div class="atc-info">
-                                        <a href="javascript:;" class="atc-up">UP:乜嘢乸型</a>
-                                        <p class="atc-time">2020-06-26 10:44:33</p>
-                                        <p class="atc-view">
-                                            <span class="icon-eye-now iconfont icon-yan"></span>
-                                            <span class="views">29,016</span>
-                                        </p>
-                                        <a href="javascript:;" title="点击前往 杂谈 领域" class="atc-domain-t">杂谈</a>
-                                        <p class="atc-domain-t">来自：</p>
-                                    </div>
-                                </div>
-                                <a href="javascript:;" title="点击查看文章" class="atc-image">
-                                    <img src="./img/img_aixifan.png">
-                                </a>
-                            </div>
+                            <art-item v-bind:msg="msgList[3]"></art-item>
+                            <hr class="article-item-hr">
                         </div>
                     </div>
                 </div>
@@ -500,6 +240,10 @@
             </div>
         </section>
     </main>
+    <!-- 测试用 -->
+    <aside>
+        <p id="text">{{message}}</p>
+    </aside>
     <!-- 这里是页尾footer -->
     <footer>
         <div class="footer-con">
@@ -606,6 +350,175 @@
             </div>
         </div>
     </footer>
+    <script>
+        //右侧热门文章item模板
+        Vue.component('right-hot-item', {
+            props: ['msg', 'index'],
+            template: `
+            <div class="HotArticle">
+                <div class="HotArticleContent">
+                    <div class="hotArticleIcon" >
+                        <div class="border-triangle" >
+                        </div>
+                        <span>{{index+1}}</span>
+                    </div>
+                </div>
+                <a href="javascript:;" title="惨亏92%! 王健林：忘掉1亿小目标，活下去！" class="HotArticleText">{{msg.title}}</a>
+                <div class="contentDese">
+                    <a href="javascript:;">UP:{{msg.uName}}</a>
+                    <span class="hotArticleView">
+                        <span class="icon-eye-new">
+                            <i class="iconfont icon-yan"></i>
+                        </span>
+                        <span>{{msg.vNum}}</span>
+                    </span>
+                    <span class="hotArticleComment">
+                        <span class="icon-to-comm-new">
+                            <i class="iconfont icon-qipao"></i>
+                        </span>
+                        <span>{{msg.sNum}}</span>
+                    </span>
+                </div>
+            </div>
+            `
+        });
+        //主体：推荐内容item模板
+        Vue.component('art-item', {
+            props: ['msg'],
+            template: `
+                <div class="article-item">
+                    <div class="atc-left">
+                        <div class="comm-count">{{msg.sNum}}</div>
+                        <div class="comm-tt">评论</div>
+                    </div>
+                    <div class="atc-center">
+                        <div class="atc-cont-top">
+                            <a href="javascript:;" class="atc-title">{{msg.title}}</a>
+                            <div class="atc-original">原创</div>
+                        </div>
+                        <div class="info-min">
+                            {{msg.minContent}}
+                        </div>
+                        <div class="atc-info">
+                            <a href="javascript:;" class="atc-up">UP:{{msg.uName}}</a>
+                            <p class="atc-time">{{msg.asDate}}</p>
+                            <p class="atc-view">
+                                <span class="icon-eye-now iconfont icon-yan"></span>
+                                <span class="views">{{msg.vNum}}</span>
+                            </p>
+                            <a href="javascript:;" title="点击前往 杂谈 领域" class="atc-domain-t">{{msg.aDomain}}</a>
+                            <p class="atc-domain-t">来自：</p>
+                        </div>
+                    </div>
+                    <a href="javascript:;" title="点击查看文章" class="atc-image">
+                        <img src="./img/img_aixifan.png">
+                    </a>
+                </div>
+            `
+        });
+        //创建Vue实例
+        //综合推荐实例
+        var mainList = new Vue({
+            el: '#art-list',
+            //假装这里已经访问了后台数据库
+            data: {
+                //推荐内容item数据
+                msgList: [{
+                        aid: 0,
+                        sNum: 69,
+                        title: '印度3000家酒店拒绝中国人入住',
+                        minContent: '日本网友用纸杯做虚拟女主播绊爱 智障标表情神还原',
+                        uName: '乜嘢乸型',
+                        asDate: '2020-06-26 10:44:33',
+                        vNum: '29,016',
+                        aDomain: '杂谈'
+                    },
+                    {
+                        aid: 1,
+                        wNum: 122,
+                        title: '去马赛克算法被指歧视黑人 AI学术大牛被喷：退网不玩了',
+                        minContent: '',
+                        uName: '流雲子',
+                        asDate: '2020-06-29 19:59:28',
+                        vNum: '62,047',
+                        aDomain: '杂谈'
+                    },
+                    {
+                        aid: 2,
+                        wNum: 114,
+                        title: '印度或得到美国支持，向中方狮子大开口，表现出不惜一战的态度',
+                        minContent: '印度或得到美国支持，向中方狮子大开口，表现出不惜一战的态度',
+                        uName: '独角丘比猫',
+                        asDate: '2020-06-29 20:01:36',
+                        vNum: '10.2万',
+                        aDomain: '杂谈'
+                    },
+                    {
+                        aid: 3,
+                        wNum: 727,
+                        title: '贵阳警方：3人伪造老干妈印章与腾讯签合同被刑拘',
+                        minContent: '贵阳警方：3人伪造老干妈印章与腾讯签合同被刑拘',
+                        uName: '梦斩千钧',
+                        asDate: '2020-06-29 19:11:38',
+                        vNum: '11.4万',
+                        aDomain: '杂谈'
+                    }
+                ],
+                rightHotList: [{
+
+                }]
+            }
+        });
+        //右侧热门文章排行实例
+        var rightHotList = new Vue({
+            el: '#rightHotList',
+            data: {
+                msgList: [{
+                        aid: 5,
+                        title: '惨亏92%! 王健林：忘掉1亿小目标，活下去！',
+                        uName: '鬼娃娃花子',
+                        vNum: '7.1万',
+                        sNum: 251
+                    },
+                    {
+                        aid: 6,
+                        title: '漫展痛车惨遭“坦克”碾压，痛车团体发文诉',
+                        uName: 'HD耄',
+                        vNum: '5万',
+                        sNum: 411
+                    },
+                    {
+                        aid: 7,
+                        title: '印媒炒作中国侵占尼泊尔村庄 尼泊尔外交辟谣',
+                        uName: '别加芹菜',
+                        vNum: '3.8万',
+                        sNum: 173
+                    },
+                    {
+                        aid: 8,
+                        title: '缉毒女警讲述卧底经历：当“大哥的女人”，毒贩照着脸打忍痛也要完成抓捕',
+                        uName: '流浪的北',
+                        vNum: '3.6万',
+                        sNum: 115
+                    },
+                    {
+                        aid: 9,
+                        title: '毫无人性！19岁中国女留学生在西澳大学校园厕所内，被残忍性侵多次!恶魔被判12年',
+                        uName: '梦斩千钧',
+                        vNum: '3万',
+                        sNum: 123
+                    },
+                    {
+                        aid: 10,
+                        title: '毁掉夏天，一瓶网红汽水就够了',
+                        uName: '爆炸才是艺术！',
+                        vNum: '7.6万',
+                        sNum: 612
+                    }
+                ]
+            }
+        });
+    </script>
 </body>
 
 </html>
