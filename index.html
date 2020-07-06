@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="./css/init.css">
     <link rel="stylesheet" href="./font/iconfont.css">
     <script src="./js/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        .dn,
+        .dn span {
+            display: block !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,46 +52,153 @@
                     </div>
                 </div>
 
-                <div class="searchBox">
+                <div id="searchBox" class="searchBox">
                     <form id="searchForm">
-                        <input type="text" id="search-text" placeholder="SNH48喊你来Pick~" maxlength="30"><button>
+                        <input type="text" id="search-text" placeholder="SNH48喊你来Pick~" maxlength="30"><button v-on:click="searchText">
                             <i class="icon icon-search"></i>
                         </button>
-
                     </form>
                 </div>
             </div>
         </div>
+        <div id="pointBox" class="headerTitleImg" @mouseenter="pointOnEnter" @mouseleave="pointOnLeave"
+            @mousemove="pointOnMove" v-bind:class="{'dn span':dFlag}">
 
-        <div class="headerTitleImg">
             <a href="https://www.acfun.cn/spn/avuplevel3"></a>
-        </div>
 
+            <span v-bind:style="{left:mX,top:mY}" class="point">带上你热爱动漫的心，猛烈投稿吧！</span>
+        </div>
     </header>
     <!-- 导航栏，包括全站分区 -->
-    <nav class="nav nav-sticky">
-        <div class="nav-list">
+    <nav id="navList" class="nav nav-sticky" @mouseover="navOver" @mouseleave="navLeave">
+        <div class="nav-list"  >
             <ul>
                 <li><a href="javascript:;">首页</a></li>
-                <li><a href="javascript:;">AC正义</a></li>
-                <li><a href="javascript:;">番剧</a></li>
-                <li><a href="javascript:;">动画</a></li>
-                <li><a href="javascript:;">娱乐</a></li>
-                <li><a href="javascript:;">生活</a></li>
-                <li><a href="javascript:;">音乐</a></li>
-                <li><a href="javascript:;">舞蹈·偶像</a></li>
-                <li><a href="javascript:;">游戏</a></li>
-                <li><a href="javascript:;">科技</a></li>
-                <li><a href="javascript:;">影视</a></li>
-                <li><a href="javascript:;">体育</a></li>
-                <li><a href="javascript:;">鱼塘</a></li>
-                <li><a href="javascript:;" class="active">文章</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,0)">AC正义</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,1)">番剧</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,2)">动画</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,3)">娱乐</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,4)">生活</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,5)">音乐</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,6)">舞蹈·偶像</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,7)">游戏</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,8)">科技</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,9)">影视</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,10)">体育</a></li>
+                <li><a href="javascript:;" @mouseenter="navOnEnter($event,11)">鱼塘</a></li>
+                <li><a href="javascript:;" class="active" @mouseenter="navOnEnter($event,12)">文章</a></li>
                 <li><a href="javascript:;">直播</a></li>
                 <li><a href="javascript:;"><i class="icon-rank"></i>全站排行榜</a></li>
             </ul>
         </div>
-
+        <div class="nav-sub" v-bind:class="{'dn':dF}" >
+            <div id="nav-sub-list" class="nav-sub-con" >
+                <ul v-bind:class="{'dn':dListFlag[0]}" style="left:0px">
+                    <li><a href="javascript:;">中国日报</a></li>
+                    <li><a href="javascript:;">环球时报</a></li>
+                    <li><a href="javascript:;">小央视频</a></li>
+                    <li><a href="javascript:;">中国网</a></li>
+                    <li><a href="javascript:;">观察者网</a></li>
+                    <li><a href="javascript:;">浙样红TV</a></li>
+                    <li><a href="javascript:;">新青年工作室</a></li>
+                    <li><a href="javascript:;">新华社现场云</a></li>
+                    <li><a href="javascript:;">快手</a></li>
+                    <li><a href="javascript:;">人民资讯</a></li>
+                    <li><a href="javascript:;">法治进行时</a></li>
+                    <li><a href="javascript:;">AC正义展览区</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[1]}" style="left:0px">
+                    <li><a href="javascript:;">番剧列表</a></li>
+                    <li><a href="javascript:;">TV动画</a></li>
+                    <li><a href="javascript:;">剧场动画</a></li>
+                    <li><a href="javascript:;">国产动画</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[2]}" style="left:0px">
+                    <li><a href="javascript:;">动画综合</a></li>
+                    <li><a href="javascript:;">短片动画</a></li>
+                    <li><a href="javascript:;">MAD·AMV</a></li>
+                    <li><a href="javascript:;">MMD·3D</a></li>
+                    <li><a href="javascript:;">虚拟偶像</a></li>
+                    <li><a href="javascript:;">动画资讯</a></li>
+                    <li><a href="javascript:;">COSPLAY·声优</a></li>
+                    <li><a href="javascript:;">布袋·特摄</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[3]}" style="left:195.45px">
+                    <li><a href="javascript:;">搞笑</a></li>
+                    <li><a href="javascript:;">鬼畜调教</a></li>
+                    <li><a href="javascript:;">娱乐圈</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[4]}" style="left:147.453px">
+                    <li><a href="javascript:;">生活日常</a></li>
+                    <li><a href="javascript:;">萌宠</a></li>
+                    <li><a href="javascript:;">美食</a></li>
+                    <li><a href="javascript:;">旅行</a></li>
+                    <li><a href="javascript:;">手工·绘画</a></li>
+                    <li><a href="javascript:;">美妆·造型</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[5]}" style="left:203.453px">
+                    <li><a href="javascript:;">原创·翻唱</a></li>
+                    <li><a href="javascript:;">演奏·乐器</a></li>
+                    <li><a href="javascript:;">Vocaloid</a></li>
+                    <li><a href="javascript:;">综合音乐·现场</a></li>
+                    <li><a href="javascript:;">音乐选集</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[6]}" style="left:386.453px">
+                    <li><a href="javascript:;">宅舞</a></li>
+                    <li><a href="javascript:;">综合舞蹈</a></li>
+                    <li><a href="javascript:;">偶像</a></li>
+                    <li><a href="javascript:;">中国舞</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[7]}" style="left:310.125px">
+                    <li><a href="javascript:;">主机单机</a></li>
+                    <li><a href="javascript:;">英雄联盟</a></li>
+                    <li><a href="javascript:;">网络游戏</a></li>
+                    <li><a href="javascript:;">电子竞技</a></li>
+                    <li><a href="javascript:;">手机游戏</a></li>
+                    <li><a href="javascript:;">桌游卡牌</a></li>
+                    <li><a href="javascript:;">Mugen</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[8]}" style="left:404.125px">
+                    <li><a href="javascript:;">手办模玩</a></li>
+                    <li><a href="javascript:;">科技制造</a></li>
+                    <li><a href="javascript:;">人文科普</a></li>
+                    <li><a href="javascript:;">汽车</a></li>
+                    <li><a href="javascript:;">数码</a></li>
+                    <li><a href="javascript:;">演讲·公开课</a></li>
+                    <li><a href="javascript:;">广告</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[9]}" style="left:526.125px">
+                    <li><a href="javascript:;">预告·花絮</a></li>
+                    <li><a href="javascript:;">电影杂谈</a></li>
+                    <li><a href="javascript:;">剧透社</a></li>
+                    <li><a href="javascript:;">综艺Show</a></li>
+                    <li><a href="javascript:;">纪实·短片</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[10]}" style="left:623.125px">
+                    <li><a href="javascript:;">综合体育</a></li>
+                    <li><a href="javascript:;">足球</a></li>
+                    <li><a href="javascript:;">篮球</a></li>
+                    <li><a href="javascript:;">搏击健身</a></li>
+                    <li><a href="javascript:;">极限竞速</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[11]}" style="left:705.125px">
+                    <li><a href="javascript:;">普法安全</a></li>
+                    <li><a href="javascript:;">国防军事</a></li>
+                    <li><a href="javascript:;">历史</a></li>
+                    <li><a href="javascript:;">新鲜事·正能量</a></li>
+                </ul>
+                <ul v-bind:class="{'dn':dListFlag[12]}" style="left:703px">
+                    <li><a href="javascript:;">综合</a></li>
+                    <li><a href="javascript:;">生活情感</a></li>
+                    <li><a href="javascript:;">游戏</a></li>
+                    <li><a href="javascript:;">涂图画话</a></li>
+                    <li><a href="javascript:;">动漫文化</a></li>
+                    <li><a href="javascript:;">漫画·文学</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
     <!-- 这里是主体部分main -->
     <main>
         <section>
@@ -124,7 +238,7 @@
 
             <!-- 右侧热门文章排行榜 -->
             <div id="rightHotList" class="ArticleBlockSpace">
-                <div  class="ArticleRightTitle">
+                <div class="ArticleRightTitle">
                     <span>热门文章</span>
                     <div class="module-tab">
                         <div class="ArticleHotTitle">
@@ -138,10 +252,7 @@
                     </div>
                     <hr>
                 </div>
-                <right-hot-item 
-                    v-for="(item,index) in msgList" 
-                    v-bind:msg="item" 
-                    v-bind:index="index"
+                <right-hot-item v-for="(item,index) in msgList" v-bind:msg="item" v-bind:index="index"
                     v-bind:key="item.aid">
                 </right-hot-item>
             </div>
@@ -435,7 +546,7 @@
                     },
                     {
                         aid: 1,
-                        wNum: 122,
+                        sNum: 122,
                         title: '去马赛克算法被指歧视黑人 AI学术大牛被喷：退网不玩了',
                         minContent: '',
                         uName: '流雲子',
@@ -445,7 +556,7 @@
                     },
                     {
                         aid: 2,
-                        wNum: 114,
+                        sNum: 114,
                         title: '印度或得到美国支持，向中方狮子大开口，表现出不惜一战的态度',
                         minContent: '印度或得到美国支持，向中方狮子大开口，表现出不惜一战的态度',
                         uName: '独角丘比猫',
@@ -455,7 +566,7 @@
                     },
                     {
                         aid: 3,
-                        wNum: 727,
+                        sNum: 727,
                         title: '贵阳警方：3人伪造老干妈印章与腾讯签合同被刑拘',
                         minContent: '贵阳警方：3人伪造老干妈印章与腾讯签合同被刑拘',
                         uName: '梦斩千钧',
@@ -472,6 +583,7 @@
         //右侧热门文章排行实例
         var rightHotList = new Vue({
             el: '#rightHotList',
+            //假装这里已经访问了后台数据库
             data: {
                 msgList: [{
                         aid: 5,
@@ -516,6 +628,77 @@
                         sNum: 612
                     }
                 ]
+            }
+        });
+        //网页头部图像提示框
+        var pointBoxShow = new Vue({
+            el: '#pointBox',
+            data: {
+                dFlag: false,
+                mX: 0,
+                mY: 0
+            },
+            methods: {
+                pointOnEnter: function (e) {
+                    this.dFlag = true;
+                },
+                pointOnLeave: function (e) {
+                    this.dFlag = false;
+                },
+                pointOnMove: function (e) {
+                    this.mX = e.offsetX + 15 + 'px';
+                    this.mY = e.offsetY - 15 + 'px';
+                }
+            }
+        });
+        //隐藏导航栏
+        var navSub = new Vue({
+            el: '#navList',
+            data: {
+                //控制导航栏弹出栏的flag
+                dF: false,
+                //控制弹出栏对应内容的flag数组(13个)
+                dListFlag: [
+                    false, false, false, false, false, false, false, false, false, false, false, false, false
+                ],
+                //记录弹出栏对应内容的标记
+                index: 0,
+                //鼠标是否在下拉栏标记
+                navSubOnFlag:false
+            },
+            methods: {
+                //鼠标移动到导航栏
+                navOnEnter: function (e, index) {
+                    //如果从一个分区标签到另一个分区标签，清除原来的下拉栏
+                    if(this.dListFlag[this.index]){
+                        this.dF = false;
+                        this.dListFlag[this.index] = false;
+                    }
+                    //显示新的下拉栏
+                    this.index = index;
+                    this.dF = true;
+                    this.dListFlag[index] = true;
+                },
+                //鼠标在导航栏上，给一个标记
+                navOver: function(){
+                    this.navSubOnFlag=true;
+                },
+                //鼠标移出导航栏
+                navLeave: function(){
+                    this.navSubOnFlag=false;
+                    this.dF = false;
+                    this.dListFlag[this.index] = false;
+                }
+            }
+        });
+        //搜索框请求后台接口实例
+        var searchBox = new Vue({
+            el:'#searchBox',
+            data:'',
+            methods:{
+                searchText:function(){
+                    console.log('ok');
+                }
             }
         });
     </script>

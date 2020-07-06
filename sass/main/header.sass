@@ -180,18 +180,42 @@ header
   //头部标题海报图
   .headerTitleImg
     position: relative
-    margin-top: 0px
-    width: 100%
     height: 180px
-    background: no-repeat center top
-    background-image: url("../upload/title_img.png")
-    background-size: auto 100%
     overflow: hidden
+    a
+      display: block
+      position: absolute
+      height: 180px
+      width: 100%
+      background: no-repeat center top
+      background-image: url("../upload/title_img.png")
+      background-size: auto 100%
+      z-index: 1
+    .point
+      display: none
+      position: absolute
+      padding: 10px 20px
+      font-size: 10px
+      color: #666
+      line-height: 1
+      background: #fff
+      border: 1px solid #ccc
+      border-radius: 6px
+      z-index: 3
+    .point::before
+      display: block
+      position: absolute
+      left: -7px
+      top: 9px
+      content: ''
+      border-width: 7px 7px 7px 0
+      border-style: solid
+      border-color: transparent #fff transparent transparent
+      z-index: 1
 //导航栏
 .nav  
   height: 46px
   width: 100%
-  
   border-bottom: 1px solid #e5e5e5
   font-size: 14px
   line-height: 46px
@@ -226,6 +250,33 @@ header
           color: $themecolor
           border-bottom: 3px solid $themecolor
           box-sizing: border-box
+  .nav-sub
+    display: none
+    position: relative
+    height: 40px
+    line-height: 40px
+    background: rgba(255,255,255,0.9)
+    border-top: 1px solid #e5e5e5
+    border-radius: 0 0 3px 3px
+    overflow: hidden
+    .nav-sub-con
+      position: relative
+      width: 1160px
+      margin: 0 auto
+      ul
+        display: none
+        position: relative
+        top: 0
+        white-space: nowrap
+        li
+          display: inline-block
+          float: none
+          margin-right: 20px
+          a
+            display: block
+            height: 46px
+            padding: 0 6px
+            color: #333
 .nav-sticky
     position: -webkit-sticky
     position: sticky

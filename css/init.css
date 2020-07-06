@@ -665,13 +665,38 @@ header {
         display: block; }
   header .headerTitleImg {
     position: relative;
-    margin-top: 0px;
-    width: 100%;
     height: 180px;
-    background: no-repeat center top;
-    background-image: url("../upload/title_img.png");
-    background-size: auto 100%;
     overflow: hidden; }
+    header .headerTitleImg a {
+      display: block;
+      position: absolute;
+      height: 180px;
+      width: 100%;
+      background: no-repeat center top;
+      background-image: url("../upload/title_img.png");
+      background-size: auto 100%;
+      z-index: 1; }
+    header .headerTitleImg .point {
+      display: none;
+      position: absolute;
+      padding: 10px 20px;
+      font-size: 10px;
+      color: #666;
+      line-height: 1;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      z-index: 3; }
+    header .headerTitleImg .point::before {
+      display: block;
+      position: absolute;
+      left: -7px;
+      top: 9px;
+      content: "";
+      border-width: 7px 7px 7px 0;
+      border-style: solid;
+      border-color: transparent #fff transparent transparent;
+      z-index: 1; }
 
 .nav {
   height: 46px;
@@ -710,6 +735,33 @@ header {
           color: #fd4c5b;
           border-bottom: 3px solid #fd4c5b;
           box-sizing: border-box; }
+  .nav .nav-sub {
+    display: none;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid #e5e5e5;
+    border-radius: 0 0 3px 3px;
+    overflow: hidden; }
+    .nav .nav-sub .nav-sub-con {
+      position: relative;
+      width: 1160px;
+      margin: 0 auto; }
+      .nav .nav-sub .nav-sub-con ul {
+        display: none;
+        position: relative;
+        top: 0;
+        white-space: nowrap; }
+        .nav .nav-sub .nav-sub-con ul li {
+          display: inline-block;
+          float: none;
+          margin-right: 20px; }
+          .nav .nav-sub .nav-sub-con ul li a {
+            display: block;
+            height: 46px;
+            padding: 0 6px;
+            color: #333; }
 
 .nav-sticky {
   position: -webkit-sticky;
