@@ -54,7 +54,8 @@
 
                 <div id="searchBox" class="searchBox">
                     <form id="searchForm">
-                        <input type="text" id="search-text" placeholder="SNH48喊你来Pick~" maxlength="30"><button v-on:click="searchText">
+                        <input type="text" id="search-text" placeholder="SNH48喊你来Pick~" maxlength="30"
+                            v-model:value="searchTextValue"><button type="button" v-on:click="searchText">
                             <i class="icon icon-search"></i>
                         </button>
                     </form>
@@ -71,7 +72,7 @@
     </header>
     <!-- 导航栏，包括全站分区 -->
     <nav id="navList" class="nav nav-sticky" @mouseover="navOver" @mouseleave="navLeave">
-        <div class="nav-list"  >
+        <div class="nav-list">
             <ul>
                 <li><a href="javascript:;">首页</a></li>
                 <li><a href="javascript:;" @mouseenter="navOnEnter($event,0)">AC正义</a></li>
@@ -91,8 +92,8 @@
                 <li><a href="javascript:;"><i class="icon-rank"></i>全站排行榜</a></li>
             </ul>
         </div>
-        <div class="nav-sub" v-bind:class="{'dn':dF}" >
-            <div id="nav-sub-list" class="nav-sub-con" >
+        <div class="nav-sub" v-bind:class="{'dn':dF}">
+            <div id="nav-sub-list" class="nav-sub-con">
                 <ul v-bind:class="{'dn':dListFlag[0]}" style="left:0px">
                     <li><a href="javascript:;">中国日报</a></li>
                     <li><a href="javascript:;">环球时报</a></li>
@@ -659,18 +660,19 @@
                 dF: false,
                 //控制弹出栏对应内容的flag数组(13个)
                 dListFlag: [
-                    false, false, false, false, false, false, false, false, false, false, false, false, false
+                    false, false, false, false, false, false, false, false, false, false, false, false,
+                    false
                 ],
                 //记录弹出栏对应内容的标记
                 index: 0,
                 //鼠标是否在下拉栏标记
-                navSubOnFlag:false
+                navSubOnFlag: false
             },
             methods: {
                 //鼠标移动到导航栏
                 navOnEnter: function (e, index) {
                     //如果从一个分区标签到另一个分区标签，清除原来的下拉栏
-                    if(this.dListFlag[this.index]){
+                    if (this.dListFlag[this.index]) {
                         this.dF = false;
                         this.dListFlag[this.index] = false;
                     }
@@ -680,12 +682,12 @@
                     this.dListFlag[index] = true;
                 },
                 //鼠标在导航栏上，给一个标记
-                navOver: function(){
-                    this.navSubOnFlag=true;
+                navOver: function () {
+                    this.navSubOnFlag = true;
                 },
                 //鼠标移出导航栏
-                navLeave: function(){
-                    this.navSubOnFlag=false;
+                navLeave: function () {
+                    this.navSubOnFlag = false;
                     this.dF = false;
                     this.dListFlag[this.index] = false;
                 }
@@ -693,12 +695,32 @@
         });
         //搜索框请求后台接口实例
         var searchBox = new Vue({
-            el:'#searchBox',
-            data:'',
-            methods:{
-                searchText:function(){
-                    console.log('ok');
+            el: '#searchBox',
+            data: {
+                searchTextValue: ''
+            },
+            methods: {
+                searchText: function () {
+                    axios.get('../data/a1.php', {
+                        params: {
+                            id: 2
+                        }
+                    }).then(function (res) {
+                        console.log(res.data);
+                    }).catch(function (res) {
+                        console.log(res);
+                    });
                 }
+                // searchText: function () {
+                //     axios.post('/user', {
+                //         firstName: 'Fred',
+                //         lastName: 'Flintstone'
+                //     }).then(function (response) {
+                //         console.log(response);
+                //     }).catch(function (error) {
+                //         console.log(error);
+                //     });
+                // }
             }
         });
     </script>
